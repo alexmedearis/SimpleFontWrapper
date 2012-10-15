@@ -22,8 +22,8 @@
 		008184B4162B8C0E00CAEFAE /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 008184B3162B8C0E00CAEFAE /* SenTestingKit.framework */; };
 		008184B5162B8C0E00CAEFAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0081848C162B8C0E00CAEFAE /* UIKit.framework */; };
 		008184B6162B8C0E00CAEFAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0081848E162B8C0E00CAEFAE /* Foundation.framework */; };
-		008184BE162B8C0E00CAEFAE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 008184BC162B8C0E00CAEFAE /* InfoPlist.strings */; };
-		008184C1162B8C0E00CAEFAE /* SimpleFontWrapperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 008184C0162B8C0E00CAEFAE /* SimpleFontWrapperTests.m */; };
+		008184CC162B8C3500CAEFAE /* CustomFontLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 008184CB162B8C3500CAEFAE /* CustomFontLabel.m */; };
+		008184CF162B8E9900CAEFAE /* bebas.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 008184CD162B8C9800CAEFAE /* bebas.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,10 +56,9 @@
 		008184AB162B8C0E00CAEFAE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		008184B2162B8C0E00CAEFAE /* SimpleFontWrapperTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleFontWrapperTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		008184B3162B8C0E00CAEFAE /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		008184BB162B8C0E00CAEFAE /* SimpleFontWrapperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleFontWrapperTests-Info.plist"; sourceTree = "<group>"; };
-		008184BD162B8C0E00CAEFAE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		008184BF162B8C0E00CAEFAE /* SimpleFontWrapperTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleFontWrapperTests.h; sourceTree = "<group>"; };
-		008184C0162B8C0E00CAEFAE /* SimpleFontWrapperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleFontWrapperTests.m; sourceTree = "<group>"; };
+		008184CA162B8C3500CAEFAE /* CustomFontLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomFontLabel.h; path = SimpleFontWrapper/CustomFontLabel.h; sourceTree = "<group>"; };
+		008184CB162B8C3500CAEFAE /* CustomFontLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomFontLabel.m; path = SimpleFontWrapper/CustomFontLabel.m; sourceTree = "<group>"; };
+		008184CD162B8C9800CAEFAE /* bebas.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = bebas.ttf; path = SimpleFontWrapper/bebas.ttf; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +88,10 @@
 		0081847D162B8C0E00CAEFAE = {
 			isa = PBXGroup;
 			children = (
+				008184CD162B8C9800CAEFAE /* bebas.ttf */,
+				008184CA162B8C3500CAEFAE /* CustomFontLabel.h */,
+				008184CB162B8C3500CAEFAE /* CustomFontLabel.m */,
 				00818492162B8C0E00CAEFAE /* SimpleFontWrapper */,
-				008184B9162B8C0E00CAEFAE /* SimpleFontWrapperTests */,
 				0081848B162B8C0E00CAEFAE /* Frameworks */,
 				00818489162B8C0E00CAEFAE /* Products */,
 			);
@@ -140,25 +141,6 @@
 				0081849E162B8C0E00CAEFAE /* Default.png */,
 				008184A0162B8C0E00CAEFAE /* Default@2x.png */,
 				008184A2162B8C0E00CAEFAE /* Default-568h@2x.png */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		008184B9162B8C0E00CAEFAE /* SimpleFontWrapperTests */ = {
-			isa = PBXGroup;
-			children = (
-				008184BF162B8C0E00CAEFAE /* SimpleFontWrapperTests.h */,
-				008184C0162B8C0E00CAEFAE /* SimpleFontWrapperTests.m */,
-				008184BA162B8C0E00CAEFAE /* Supporting Files */,
-			);
-			path = SimpleFontWrapperTests;
-			sourceTree = "<group>";
-		};
-		008184BA162B8C0E00CAEFAE /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				008184BB162B8C0E00CAEFAE /* SimpleFontWrapperTests-Info.plist */,
-				008184BC162B8C0E00CAEFAE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -240,6 +222,7 @@
 				008184A3162B8C0E00CAEFAE /* Default-568h@2x.png in Resources */,
 				008184A6162B8C0E00CAEFAE /* MainStoryboard_iPhone.storyboard in Resources */,
 				008184A9162B8C0E00CAEFAE /* MainStoryboard_iPad.storyboard in Resources */,
+				008184CF162B8E9900CAEFAE /* bebas.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,7 +230,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				008184BE162B8C0E00CAEFAE /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +259,7 @@
 				00818499162B8C0E00CAEFAE /* main.m in Sources */,
 				0081849D162B8C0E00CAEFAE /* AppDelegate.m in Sources */,
 				008184AC162B8C0E00CAEFAE /* ViewController.m in Sources */,
+				008184CC162B8C3500CAEFAE /* CustomFontLabel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,7 +267,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				008184C1162B8C0E00CAEFAE /* SimpleFontWrapperTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,14 +303,6 @@
 				008184A8162B8C0E00CAEFAE /* en */,
 			);
 			name = MainStoryboard_iPad.storyboard;
-			sourceTree = "<group>";
-		};
-		008184BC162B8C0E00CAEFAE /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				008184BD162B8C0E00CAEFAE /* en */,
-			);
-			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
