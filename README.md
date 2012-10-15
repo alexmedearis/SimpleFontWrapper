@@ -1,0 +1,1 @@
+Shows use of custom fonts. A simple wrapper for UIFont so that custom fonts can be used in storyboard.
